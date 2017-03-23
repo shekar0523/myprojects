@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170320 14:21:49.154" generator="Robot 3.0.2 (Python 2.7.13 on win32)">
+<suite source="C:\PycharmProjects\pythonCode\tests" id="s1" name="Tests">
+<suite source="C:\PycharmProjects\pythonCode\tests\amazon.robot" id="s1-s1" name="Amazon">
+<test id="s1-s1-t1" name="user must sign in to checkout">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://www.amazon.com</arg>
+<arg>gc</arg>
+</arguments>
+<msg timestamp="20170320 14:21:50.683" level="INFO">Opening browser 'gc' to base url 'http://www.amazon.com'</msg>
+<status status="PASS" endtime="20170320 14:21:57.047" starttime="20170320 14:21:50.683"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170320 14:22:00.238" starttime="20170320 14:21:57.052"></status>
+</kw>
+<doc>this is info about testcase</doc>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="PASS" endtime="20170320 14:22:00.240" critical="yes" starttime="20170320 14:21:50.682"></status>
+</test>
+<doc>This is basic info about suite</doc>
+<status status="PASS" endtime="20170320 14:22:00.246" starttime="20170320 14:21:49.256"></status>
+</suite>
+<suite source="C:\PycharmProjects\pythonCode\tests\amazon1.robot" id="s1-s2" name="Amazon1">
+<test id="s1-s2-t1" name="user must sign in to checkout">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://www.amazon.com</arg>
+<arg>gc</arg>
+</arguments>
+<msg timestamp="20170320 14:22:00.268" level="INFO">Opening browser 'gc' to base url 'http://www.amazon.com'</msg>
+<status status="PASS" endtime="20170320 14:22:06.376" starttime="20170320 14:22:00.267"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20170320 14:22:09.378" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20170320 14:22:09.379" starttime="20170320 14:22:06.377"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Your Amazon.com</arg>
+</arguments>
+<status status="PASS" endtime="20170320 14:22:09.473" starttime="20170320 14:22:09.380"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=twotabsearchtextbox</arg>
+<arg>Ferrari 458</arg>
+</arguments>
+<msg timestamp="20170320 14:22:09.478" level="INFO">Typing text 'Ferrari 458' into text field 'id=twotabsearchtextbox'</msg>
+<status status="PASS" endtime="20170320 14:22:09.709" starttime="20170320 14:22:09.477"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="nav-search"]/form/div[2]/div/input</arg>
+</arguments>
+<msg timestamp="20170320 14:22:09.711" level="INFO">Clicking button 'xpath=//*[@id="nav-search"]/form/div[2]/div/input'.</msg>
+<status status="PASS" endtime="20170320 14:22:13.150" starttime="20170320 14:22:09.710"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>results for "Ferrari 458"</arg>
+</arguments>
+<status status="PASS" endtime="20170320 14:22:13.344" starttime="20170320 14:22:13.156"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>xpath=.//*[@id='result_0']/div/div/div/div[2]/div[2]/div[1]/a</arg>
+</arguments>
+<msg timestamp="20170320 14:22:13.346" level="INFO">Clicking link 'xpath=.//*[@id='result_0']/div/div/div/div[2]/div[2]/div[1]/a'.</msg>
+<status status="PASS" endtime="20170320 14:22:17.915" starttime="20170320 14:22:13.346"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Back to search results</arg>
+</arguments>
+<status status="PASS" endtime="20170320 14:22:17.997" starttime="20170320 14:22:17.919"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>id=add-to-cart-button</arg>
+</arguments>
+<msg timestamp="20170320 14:22:17.998" level="INFO">Clicking button 'id=add-to-cart-button'.</msg>
+<status status="PASS" endtime="20170320 14:22:19.281" starttime="20170320 14:22:17.998"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Added to Cart</arg>
+</arguments>
+<status status="PASS" endtime="20170320 14:22:19.391" starttime="20170320 14:22:19.283"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>Proceed to checkout (1 item)</arg>
+</arguments>
+<msg timestamp="20170320 14:22:19.392" level="INFO">Clicking link 'Proceed to checkout (1 item)'.</msg>
+<status status="PASS" endtime="20170320 14:22:20.307" starttime="20170320 14:22:19.392"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Sign in</arg>
+</arguments>
+<status status="PASS" endtime="20170320 14:22:20.391" starttime="20170320 14:22:20.318"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${variable1}</arg>
+</arguments>
+<msg timestamp="20170320 14:22:20.392" level="INFO">hello world</msg>
+<status status="PASS" endtime="20170320 14:22:20.393" starttime="20170320 14:22:20.392"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170320 14:22:23.660" starttime="20170320 14:22:20.393"></status>
+</kw>
+<doc>this is info about testcase</doc>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="PASS" endtime="20170320 14:22:23.662" critical="yes" starttime="20170320 14:22:00.265"></status>
+</test>
+<doc>This is basic info about suite</doc>
+<status status="PASS" endtime="20170320 14:22:23.671" starttime="20170320 14:22:00.255"></status>
+</suite>
+<status status="PASS" endtime="20170320 14:22:23.685" starttime="20170320 14:21:49.157"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="2">Smoke</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Tests" pass="2">Tests</stat>
+<stat fail="0" id="s1-s1" name="Amazon" pass="1">Tests.Amazon</stat>
+<stat fail="0" id="s1-s2" name="Amazon1" pass="1">Tests.Amazon1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
