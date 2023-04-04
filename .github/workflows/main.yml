@@ -13,5 +13,8 @@ jobs:
     runs-on: windows-latest
     
     steps:
+      - name: checkout repo content
+        uses: actions/checkout@v2 # checkout the repository content to github runner
+        
       - name: execute py script # run helloworld.py
         run: python helloworld.py
