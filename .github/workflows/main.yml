@@ -1,0 +1,17 @@
+name: Shekar Test
+
+on:
+  workflow_dispatch:
+  
+  push:
+    branches:
+    - master
+    
+jobs:
+  my_job:
+    name: run python file
+    runs-on: windows-latest
+    
+    steps:
+      - name: execute py script # run helloworld.py
+        run: python helloworld.py
